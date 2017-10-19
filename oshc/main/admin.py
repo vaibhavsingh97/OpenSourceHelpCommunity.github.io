@@ -10,5 +10,9 @@ class chatSessionAdmin(admin.ModelAdmin):
     list_display = ('title', 'start_date')
 
 
+class contestAdmin(admin.ModelAdmin):
+    list_display = ('name', 'link', 'description', 'start_date', 'end_date', 'approved')
+
+
 admin.site.register(chatSession, chatSessionAdmin)
-admin.site.register(Contest)
+admin.site.register(Contest, contestAdmin)
